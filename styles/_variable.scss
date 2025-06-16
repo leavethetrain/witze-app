@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Scribble&display=swap");
+
+$primary-color: #04da4b;
+$font-text: "Inter", sans-serif;
+$font-title: "Rubik Scribble", system-ui;
+$text-color: #ffffff;
+$primary-background: #333;
+$secondary-background: #444444;
+$danger-color: #f02f2f;
+
+@mixin tablet-and-up() {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
