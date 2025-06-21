@@ -14,3 +14,10 @@ export function saveJoke(joke) {
   const newSavedJokes = [joke, ...savedJokes];
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newSavedJokes));
 }
+
+export function removeJoke(index) {
+  const savedJoke = getSavedJokes();
+
+  savedJoke.splice(index, 1);
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(savedJoke));
+}

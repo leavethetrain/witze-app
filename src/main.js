@@ -1,12 +1,13 @@
 import "../styles/main.scss";
 import { getAPI } from "./fetch";
-import { getSavedJokes, saveJoke } from "./localstorage";
+import { getSavedJokes, removeJoke, saveJoke } from "./localstorage";
 
 const loadJokeBtn = document.querySelector(".current-joke__generate");
 const currentJokeElement = document.querySelector(".current-joke__text");
 const saveJokeBtn = document.querySelector(".current-joke__save");
 //const savedJokesText = document.querySelector(".saved-joke__text");
 const savedJokesListEl = document.querySelector(".saved-jokes__list");
+const deleteJokeBtn = document.querySelector(".saved-joke__remove");
 
 let currentJoke = "";
 
@@ -27,17 +28,24 @@ function saveCurrentJoke() {
   renderJokes();
 }
 
+function deleteJoke(index) {
+  removeJoke(index);
+  renderJokes();
+}
+
+window.deleteJoke = deleteJoke;
+
 function renderJokes() {
   const savedJokes = getSavedJokes();
   let html = "";
 
-  savedJokes.forEach((joke) => {
+  savedJokes.forEach((joke, index) => {
     html += `
         <div class="saved-joke">
             <div class="saved-joke__text">
              ${joke}
             </div>
-            <button class="saved-joke__remove saved-joke__remove--active">
+            <button class="saved-joke__remove saved-joke__remove--active" onclick="deleteJoke(${index})">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -65,4 +73,5 @@ function renderJokes() {
 
 loadJokeBtn.addEventListener("click", loadNewJoke);
 saveJokeBtn.addEventListener("click", saveCurrentJoke);
+
 renderJokes();
