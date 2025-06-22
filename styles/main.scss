@@ -165,3 +165,19 @@ body {
     height: 1.5rem;
   }
 }
+
+.select-joke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &__select {
+    height: 2rem;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: $primary-background;
+  }
+}

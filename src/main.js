@@ -5,14 +5,19 @@ import { getSavedJokes, removeJoke, saveJoke } from "./localstorage";
 const loadJokeBtn = document.querySelector(".current-joke__generate");
 const currentJokeElement = document.querySelector(".current-joke__text");
 const saveJokeBtn = document.querySelector(".current-joke__save");
-//const savedJokesText = document.querySelector(".saved-joke__text");
 const savedJokesListEl = document.querySelector(".saved-jokes__list");
-const deleteJokeBtn = document.querySelector(".saved-joke__remove");
+const selectEl = document.querySelector(".select-joke__select");
 
 let currentJoke = "";
 
+selectEl.addEventListener("change", () => {
+  const selectedCategory = selectEl.value;
+  console.log(selectedCategory);
+});
+
 async function loadNewJoke() {
-  const joke = await getAPI();
+  const selectedCategory = selectEl.value;
+  const joke = await getAPI(selectedCategory);
 
   if (!currentJoke) {
     saveJokeBtn.classList.remove("current-joke__save--disabled");
