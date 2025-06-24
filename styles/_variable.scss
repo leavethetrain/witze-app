@@ -8,6 +8,11 @@ $primary-background: #333;
 $secondary-background: #444444;
 $danger-color: #f02f2f;
 
+$primary-color-light: #e07a5f;
+$primary-background-light: #fdeee9;
+$text-color-light: #2d2d2d;
+$secondary-background-light: #f2cc8f;
+
 @mixin tablet-and-up() {
   @media only screen and (min-width: 600px) {
     @content;

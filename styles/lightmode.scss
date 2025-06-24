@@ -1,0 +1,67 @@
+@use "variable" as *;
+
+body.light {
+  background-color: $primary-background-light;
+}
+
+.light {
+  .light-mode {
+    color: $text-color-light;
+    border: 1px solid $text-color-light;
+
+    &--hover:hover {
+      background-color: $primary-color-light;
+    }
+  }
+}
+
+.light #app .heading {
+  color: $primary-color-light;
+}
+
+body.light {
+  .current-joke {
+    color: $text-color-light;
+    background-color: $secondary-background-light;
+
+    &__generate {
+      background-color: $primary-background-light;
+      color: $text-color-light;
+
+      &--active:hover {
+        background-color: darken($primary-color-light, 5%);
+      }
+    }
+    &__save {
+      color: $primary-color-light;
+      border: 1px solid $primary-color-light;
+      background-color: transparent;
+
+      &--hover:hover {
+        background-color: $primary-color-light;
+        color: $text-color-light;
+      }
+    }
+  }
+}
+
+body.light .saved-jokes {
+  &__title {
+    color: $text-color-light;
+  }
+}
+
+body.light {
+  .saved-joke {
+    color: $text-color-light;
+    background-color: $secondary-background-light;
+  }
+
+  &__remove {
+    color: $text-color-light;
+  }
+}
+
+.light .select-joke__select {
+  background-color: $primary-color-light;
+}

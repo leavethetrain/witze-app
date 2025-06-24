@@ -1,4 +1,5 @@
 @use "variable" as *;
+@use "lightmode" as *;
 
 * {
   margin: 0;
@@ -11,7 +12,7 @@ body {
   font-family: $font-text;
 }
 
-.darkmode-wrapper {
+.lightmode-wrapper {
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -20,7 +21,7 @@ body {
   margin: 1rem 0 0 0;
 }
 
-.dark-mode {
+.light-mode {
   width: 25px;
   height: 25px;
   padding: 0.2rem;

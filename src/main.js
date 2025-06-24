@@ -7,6 +7,9 @@ const currentJokeElement = document.querySelector(".current-joke__text");
 const saveJokeBtn = document.querySelector(".current-joke__save");
 const savedJokesListEl = document.querySelector(".saved-jokes__list");
 const selectEl = document.querySelector(".select-joke__select");
+const darkModeBtn = document.querySelector(".light-mode");
+
+darkModeBtn.addEventListener("click", darkMode);
 
 let currentJoke = "";
 
@@ -76,7 +79,10 @@ function renderJokes() {
   savedJokesListEl.innerHTML = html;
 }
 
-function darkMode() {}
+function darkMode() {
+  var element = document.body;
+  element.classList.toggle("light");
+}
 
 loadJokeBtn.addEventListener("click", loadNewJoke);
 saveJokeBtn.addEventListener("click", saveCurrentJoke);
