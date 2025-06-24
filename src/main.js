@@ -1,6 +1,7 @@
 import "../styles/main.scss";
 import { getAPI } from "./fetch";
 import { getSavedJokes, removeJoke, saveJoke } from "./localstorage";
+document.body.classList.remove("light");
 
 const loadJokeBtn = document.querySelector(".current-joke__generate");
 const currentJokeElement = document.querySelector(".current-joke__text");
