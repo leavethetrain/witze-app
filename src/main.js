@@ -76,6 +76,8 @@ function renderJokes() {
   savedJokesListEl.innerHTML = html;
 }
 
+function darkMode() {}
+
 loadJokeBtn.addEventListener("click", loadNewJoke);
 saveJokeBtn.addEventListener("click", saveCurrentJoke);
 
