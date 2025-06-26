@@ -10,8 +10,8 @@ body.light {
 
 .light {
   .light-mode {
-    color: $text-color-light;
-    border: 1px solid $text-color-light;
+    color: $primary-color-light;
+    border: 1px solid $primary-color-light;
 
     &--hover:hover {
       background-color: $primary-color-light;
