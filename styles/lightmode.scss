@@ -4,6 +4,10 @@ body.light {
   background-color: $primary-background-light;
 }
 
+.light .nojokes {
+  color: $text-color-light;
+}
+
 .light {
   .light-mode {
     color: $text-color-light;
@@ -33,11 +37,12 @@ body.light {
       }
     }
     &__save {
-      color: $primary-color-light;
-      border: 1px solid $primary-color-light;
+      color: $text-color-light;
+      border: 1px solid $text-color-light;
       background-color: transparent;
 
       &--hover:hover {
+        border: 1px solid $primary-color-light;
         background-color: $primary-color-light;
         color: $text-color-light;
       }

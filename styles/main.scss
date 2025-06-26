@@ -12,6 +12,10 @@ body {
   font-family: $font-text;
 }
 
+.nojokes {
+  color: white;
+}
+
 .lightmode-wrapper {
   width: 90%;
   display: flex;
@@ -202,6 +206,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9rem;
+
+  @include tablet-and-up() {
+    font-size: 1rem;
+  }
 
   &__select {
     height: 2rem;
